@@ -1,0 +1,14 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "This is just for fun because i am bored",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "Komilov Shohjaxon",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}
