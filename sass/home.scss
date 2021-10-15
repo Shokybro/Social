@@ -1,3 +1,13 @@
+/*
+Vuetify Default Theme:
+  primary: '#1976D2',
+  secondary: '#424242',
+  accent: '#82B1FF',
+  error: '#FF5252',
+  info: '#2196F3',
+  success: '#4CAF50',
+  warning: '#FFC107',
+*/
 html {
     font-size: 10px;
 }
@@ -21,8 +31,75 @@ html {
     }
 }
 .post {
+    margin-top: 5rem;
 
     &__box {
-        
+        background-color: #1976D2;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &--profile {
+        height: 5rem;
+        width: 5rem;
+        background-color: #0080ff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    &--input {
+        margin-left: 3rem;
+
+        & input {
+            border: none;
+            padding: .5rem 2rem;
+            font-size: 2rem;
+            border-radius: 5rem;
+            width: 50rem;
+            outline: none;
+            color: #1976D2;
+
+            &::placeholder {
+                color: #1976D2;
+            }
+        }
+    }
+}
+
+.posts {
+    margin-top: 10rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.yost {
+    // display: flex;
+    // align-items: center;
+    background-color: #0080ff;
+    padding: 2rem;
+    
+    &--profile {
+        height: 5rem;
+        width: 5rem;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        clip-path: circle(50% at 50% 50%);
+        // border: 2px solid #fff;
+    }
+
+    &--info {
+        display: inline-block;
+        margin-left: 8rem;
+    }
+
+    &--title {
+        color: #fff;
+        font-size: 2rem;
+        margin-left: 1rem;
     }
 }
