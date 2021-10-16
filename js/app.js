@@ -3,6 +3,7 @@
 const postForm = document.getElementById('form');
 const postsCollection = document.querySelector('.posts');
 const postInput = document.getElementById('post-input');
+const postAlert = document.querySelector('.alert')
 
 postForm.addEventListener('submit', post);
 
@@ -11,9 +12,16 @@ function post(e) {
 
     val = postInput.value;
 
-    creatPost(val);
+    if (val.length > 0) {
+        creatPost()
+    }
+    else {
+        postAlert.classList.remove('d-none')
 
-    clearInput(postInput)
+        setTimeout(function () {
+            postAlert.classList.add('d-none')
+        }, 3000)
+    }
 }
 
 function creatPost (val) {
@@ -32,7 +40,7 @@ function creatPost (val) {
     
     let yostInfo = document.createElement('div');
     yostInfo.classList.add('yost--info');
-    yostInfo.textContent = val;
+    yostInfo.textContent = postInput.value;
 
     flexDiv.appendChild(profile);
     flexDiv.appendChild(postTitle);
@@ -41,6 +49,8 @@ function creatPost (val) {
     yost.appendChild(yostInfo);
 
     postsCollection.appendChild(yost);
+
+    clearInput(postInput)
 }
 
 function clearInput (input) {
